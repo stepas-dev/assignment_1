@@ -1,0 +1,88 @@
+.game-number__container {
+  margin: 1.5rem;
+  display: flex;
+  /*border-radius: 1rem;*/
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 2rem;
+  width: 3rem;
+  border: 3px solid rgb(0, 85, 255);
+}
+
+.game-number__number {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game-number__number:hover {
+  background-color: rgb(0, 85, 255);
+  color: white;
+}
+
+.game-number__input {
+  display: block;
+  height: 100%;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.game-number__delete {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  border: 2px solid red;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: red;
+  cursor: pointer;
+  outline: none;
+}
+
+.game-number__delete:hover {
+  background-color: red;
+  color: white;
+}
+
+.game-number__insert {
+  position: absolute;
+  bottom: -1rem;
+  /*transform: translateY(-50%);*/
+  /*right: -1rem;*/
+  border: 2px solid green;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer;
+  outline: none;
+}
+.game-number__insert-before {
+  left: -1rem;
+}
+
+.game-number__insert-after {
+  right: -1rem;
+}
+
+.game-number__insert:hover {
+  background-color: green;
+  color: white;
+}
