@@ -29,7 +29,7 @@ export const GameNumber = memo(props => {
   } else {
     numberUI = (
       <div
-        className={'game-number__number'}
+        className={'game-number__number-container'}
         onClick={() => {
           setEditMode(true);
         }}

@@ -14,9 +14,9 @@ const App = () => {
       setGameWon(undefined);
     }
   }, [numbers]);
-  const handleSubmitArray = newNumbers => {
+  const handleSubmitArray = useCallback(newNumbers => {
     setNumbers(newNumbers);
-  };
+  }, []);
   const handleNumberChange = useCallback((index, newNumber) => {
     setNumbers(oldNumbers => {
       const newNumbers = oldNumbers.slice();

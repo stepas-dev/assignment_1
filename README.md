@@ -12,6 +12,10 @@ Tests can be found on App.test.js.<br />
 
 In the project directory, you can run:
 
+### `yarn`
+
+Install necessary packages to run project
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

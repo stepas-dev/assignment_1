@@ -37,26 +37,34 @@ test('[-1, 2, 2] array should throw "Number can not be negative"', () => {
 test('ArrayInput should have error on empty submit', () => {
   const wrapper = shallow(<ArrayInput onSubmit={() => {}} />);
   wrapper.find('button.array-input__submit').simulate('click');
-  expect(wrapper.contains(<p>Invalid input !</p>)).toBeTruthy();
+  setTimeout(() => {
+    expect(wrapper.contains(<p>Invalid input !</p>)).toBeTruthy();
+  }, 0);
 });
 
 test('ArrayInput should have error on "1 a 2" submit', () => {
   const wrapper = shallow(<ArrayInput onSubmit={() => {}} />);
   wrapper.find('input').simulate('change', { target: { value: '1 a 2' } });
   wrapper.find('button.array-input__submit').simulate('click');
-  expect(wrapper.contains(<p>Invalid input !</p>)).toBeTruthy();
+  setTimeout(() => {
+    expect(wrapper.contains(<p>Invalid input !</p>)).toBeTruthy();
+  }, 0);
 });
 
 test('ArrayInput should not have error on "1 2 3" submit', () => {
   const wrapper = shallow(<ArrayInput onSubmit={() => {}} />);
   wrapper.find('input').simulate('change', { target: { value: '1 2 3' } });
   wrapper.find('button.array-input__submit').simulate('click');
-  expect(wrapper.contains(<p>Invalid input !</p>)).toBeFalsy();
+  setTimeout(() => {
+    expect(wrapper.contains(<p>Invalid input !</p>)).toBeFalsy();
+  }, 0);
 });
 
 test('ArrayInput should not have error on " 2  2  3  " submit', () => {
   const wrapper = shallow(<ArrayInput onSubmit={() => {}} />);
   wrapper.find('input').simulate('change', { target: { value: ' 2  2  3  ' } });
   wrapper.find('button.array-input__submit').simulate('click');
-  expect(wrapper.contains(<p>Invalid input !</p>)).toBeFalsy();
+  setTimeout(() => {
+    expect(wrapper.contains(<p>Invalid input !</p>)).toBeFalsy();
+  }, 0);
 });

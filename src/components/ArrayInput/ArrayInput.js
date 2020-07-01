@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import './ArrayInput.css';
 
-export const ArrayInput = props => {
+export const ArrayInput = memo(props => {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
   useEffect(() => {
@@ -18,16 +18,12 @@ export const ArrayInput = props => {
     };
   }, [error]);
   const handleValidateInputAndSubmit = () => {
-    // const noSpacesValue = value.replace(/\s/g, '');
-    // if (noSpacesValue.length === 0) {
-    //   return;
-    // }
-    const noSpacesValue = value.trim();
+    const formattedValue = value.trim();
     const regexp = new RegExp('^(\\d+($|\\s+))+$');
-    const valid = regexp.test(noSpacesValue);
+    const valid = regexp.test(formattedValue);
 
     if (valid) {
-      const numbers = noSpacesValue
+      const numbers = formattedValue
         .split(' ')
         .filter(n => n !== '')
         .map(n => parseInt(n, 10));
@@ -58,4 +54,4 @@ export const ArrayInput = props => {
       </div>
     </div>
   );
-};
+});
