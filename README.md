@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##About
+## About
 
 Interactive game witch determines whether last index is reachable, implemented two solutions - one using recursion, other using iteration.<br />
 
